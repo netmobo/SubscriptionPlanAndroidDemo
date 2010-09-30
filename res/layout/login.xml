@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/QSO.FP.Layout"
+        android:fillViewport="true"
+    >
+    <RelativeLayout 
+            style="@style/QSO.FP.Layout"
+        >
+        <TextView 
+                android:id="@+id/login_title"
+                android:text="Sign in with your user account" 
+                style="@style/QSO.FW.TitleLabel_TextView"
+            />
+        <View
+                android:id="@+id/spacer1"
+                android:layout_height="10px" 
+                android:layout_width="fill_parent" 
+                android:layout_below="@id/login_title"
+            />
+        <LinearLayout 
+                android:id="@+id/errorStub"
+                android:layout_below="@id/spacer1"
+                style="@style/QSO.FW"
+            >
+            <TextView 
+                    android:id="@+id/errorText"
+                    style="@style/QSO.FW" 
+                    android:gravity="center"
+                    android:visibility="gone" 
+                />
+        </LinearLayout>
+        <View
+                android:id="@+id/spacer2"
+                android:layout_height="10px" 
+                android:layout_width="fill_parent" 
+                android:layout_below="@id/errorStub"
+            />
+        <TableLayout 
+                android:id="@+id/login_client_layout"
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent"
+                style="@style/QSO.FW.TwoColumnList_Table"
+                android:layout_below="@id/spacer2"
+            > 
+            <TableRow>
+                <TextView 
+                        android:text="User Name:" 
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/login_username" 
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Password:" 
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/login_password" 
+                        android:password="true" 
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+        </TableLayout>
+        <CheckBox 
+                android:id="@+id/login_remember_password"
+                android:text="Remember Password"
+                android:layout_below="@id/login_client_layout"
+                style="@style/QSO.WC.Action_CheckBox"
+                android:layout_alignParentRight="true"
+            />
+        <Button 
+                android:id="@+id/login_login_button" 
+                android:text="Log In" 
+                android:minWidth="75px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/login_remember_password"
+                style="@style/QSO.WC.Action_Button"
+            />
+        <Button 
+                android:id="@+id/login_signup_button" 
+                android:text="Create an account>>" 
+                android:layout_below="@id/login_remember_password"
+                android:layout_toLeftOf="@id/login_login_button"
+                style="@style/QSO.WC.Action_Button"
+            />
+    </RelativeLayout>
+</ScrollView>

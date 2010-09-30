@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/QSO.FP.Layout"
+    >
+    <RelativeLayout
+            style="@style/QSO.FP.Layout" 
+        >
+        <TextView
+                android:id="@+id/welcome_banner" 
+                android:text="Welcome" 
+                android:gravity="center_horizontal"
+                android:textSize="55sp"
+                style="@style/QSO.FW"
+            />
+            
+        <View
+                android:id="@+id/spacer1"
+                android:layout_width="150px"
+                android:layout_height="5px"
+                android:background="#DEADBABE"
+                android:layout_below="@id/welcome_banner"
+                android:layout_alignParentRight="true"
+            />
+        
+        <LinearLayout 
+                android:id="@+id/errorStub"
+                android:layout_below="@id/spacer1"
+                android:padding="4px"
+                style="@style/QSO.FW"
+            >   
+            <TextView
+                    android:id="@+id/errorText"
+                    android:textColor="#f00"
+                    android:layout_margin="4px"
+                    android:visibility="gone"
+                    style="@style/QSO.FW"
+                />
+        </LinearLayout> 
+            
+        <TableLayout
+                android:id="@+id/home_account_panel"
+                android:layout_below="@id/errorStub"
+                style="@style/QSO.FW.TwoColumnList_Table"
+            >
+            <TableRow>
+                <TextView
+                        android:text="Account: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                    
+                <TextView
+                        android:id="@+id/userhome_accountid"
+                        style="@style/QSO.FP.PropertyValue_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:id="@+id/label1"
+                        android:text="@string/itemexpand_textview_listpicker"
+                        style="@style/QSO.FP.ListPickerLabel_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:text="Current Plan: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                    
+                <TextView
+                        android:id="@+id/userhome_plandescription"
+                        android:textColor="#F000"
+                        android:background="#EEF"
+                        style="@style/QSO.FP.PropertyValue_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:text="Last plan refresh date: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                    
+                <TextView
+                        android:id="@+id/userhome_lastplanrefreshdate"
+                        android:textColor="#F000"
+                        android:background="#EEF"
+                        style="@style/QSO.FP.PropertyValue_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:text="Recent Monthly Charge: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                    
+                <TextView
+                        android:id="@+id/userhome_lastplanrc"
+                        android:textColor="#F000"
+                        android:background="#EEF"
+                        style="@style/QSO.FP.PropertyValue_TextView"
+                    />
+            </TableRow>
+            
+            <TableRow>
+                <TextView
+                        android:text="Free Movies: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                    
+                <TextView
+                        android:id="@+id/userhome_freevaluebal"
+                        android:textColor="#F000"
+                        android:background="#EEF"
+                        style="@style/QSO.FP.PropertyValue_TextView"
+                    />
+            </TableRow>
+        </TableLayout>
+        <ImageButton
+                android:id="@+id/userhome_refresh"
+                android:layout_below="@id/home_account_panel"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_menu_refresh"
+                style="@style/Action_ImageButton"
+            />
+        <ImageButton
+                android:id="@+id/userhome_logout"
+                android:layout_below="@id/home_account_panel"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/logout"
+                style="@style/Action_ImageButton"
+            />
+        <View
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px"
+                android:id="@+id/spacer2"
+                android:layout_width="150px"
+                android:layout_height="5px"
+                android:background="#DEADBABE"
+                android:layout_below="@id/userhome_refresh"
+                android:layout_alignParentRight="true"
+            />
+        <TableLayout
+                android:layout_below="@id/spacer2"
+                style="@style/QSO.FW.TwoColumnList_Table"
+            >
+            <TableRow>
+	            <Button android:id="@+id/userhome_subscribe"
+	                    android:text="Change Plans"
+	                    style="@style/QSO.WC.UserHomeActions_Button"
+	                />
+	            <Button android:id="@+id/userhome_purchasemovie"
+	                    android:text="Available Movies"
+	                    style="@style/QSO.WC.UserHomeActions_Button"
+	                />
+	            <Button android:id="@+id/userhome_accounthistory"
+	                    android:text="Balance History"
+	                    style="@style/QSO.WC.UserHomeActions_Button"
+	                />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</ScrollView>

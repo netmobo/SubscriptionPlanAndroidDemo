@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/itemlist_layout" 
+        style="@style/QSO.FP.Layout"
+    >
+    <!-- retaining list_ prefix for reuse by parent classes -->
+    <TextView 
+            android:id="@+id/list_title"
+            android:text="Item List."
+            style="@style/QSO.FW.TitleLabel_TextView"
+        />
+    <RelativeLayout
+            android:id="@+id/purchaseoptions"
+            android:layout_below="@id/list_title"
+            style="@style/QSO.FW.Layout"
+        >
+	    <TableLayout
+	            android:id="@+id/ml_cc_panel"
+	            style="@style/QSO.FW.TwoColumnList_Table"
+	        >
+	        <TableRow>
+	            <TextView
+	                    android:text="Active Card: "
+	                    style="@style/QSO.FP.PropertyLabel_TextView"
+	                />
+	            <TextView
+	                    android:id="@+id/ml_usercard"
+	                    style="@style/QSO.FP.PropertyValue_TextView"
+	                />
+	        </TableRow>
+	        <TableRow>
+	            <LinearLayout 
+	                    android:gravity="right"
+                    >
+	                <TextView 
+	                        android:id="@+id/label1"
+	                        android:text="@string/itemexpand_textview_listpicker"
+	                        style="@style/QSO.FP.ListPickerLabel_TextView"
+	                    />
+	                <ImageButton
+	                        android:id="@+id/ml_addcard"
+	                        android:src="@android:drawable/ic_menu_add"
+	                        style="@style/Action_ImageButton"
+	                        android:gravity="right"
+	                    />
+	            </LinearLayout>
+	        </TableRow>
+	    </TableLayout>
+	    <TableLayout
+	            android:id="@+id/ml_fv_panel"
+	            android:layout_below="@id/list_title"
+	            style="@style/QSO.FW.TwoColumnList_Table"
+	        >
+	        <TableRow>
+	            <TextView
+	                    android:text="Free movies remaining: "
+	                    style="@style/QSO.FP.PropertyLabel_TextView"
+	                />
+	            <TextView
+	                    android:id="@+id/ml_freevalue"
+	                    style="@style/QSO.FP.PropertyLabel_TextView"
+	                    android:gravity="left|center_vertical"
+	                    android:textColor="#F000"
+	                />
+	        </TableRow>
+	    </TableLayout>
+    </RelativeLayout>
+    <View
+            android:id="@+id/spacer1"
+            android:layout_width="150px"
+            android:layout_height="5px"
+            android:background="#DEADBABE"
+            android:layout_below="@id/purchaseoptions"
+            android:layout_alignParentRight="true"
+        />
+    <!-- have this as staple to each list activity -->
+    <RelativeLayout
+            android:id="@+id/bottom_panel"
+            android:layout_alignParentBottom="true"
+            style="@style/QSO.FW.Layout"
+        >
+            <ImageButton android:id="@+id/list_refresh"
+                    android:src="@drawable/ic_menu_refresh"
+                    android:padding="3px"
+                    android:layout_alignParentRight="true"
+                    style="@style/Action_ImageButton"
+                />
+            
+            <include 
+                    android:id="@+id/paging_layout"                    layout="@layout/paging"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/list_refresh"
+                />
+    </RelativeLayout>    
+    <ListView 
+            android:id="@id/android:list"
+            android:padding="3px"
+            style="@style/QSO.FW"
+            android:layout_above="@id/bottom_panel"
+            android:layout_below="@id/spacer1"
+        />
+</RelativeLayout>

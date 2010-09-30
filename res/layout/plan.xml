@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/QSO.FP.Layout"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+    >
+    <RelativeLayout
+            style="@style/QSO.FP.Layout"
+        >
+        <TableLayout
+                android:id="@+id/plan_cc_panel"
+                style="@style/QSO.FW.TwoColumnList_Table"
+            >
+            <TableRow>
+                <TextView
+                        android:text="Active Card: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <TextView
+                        android:id="@+id/plan_usercard"
+                        style="@style/QSO.FP.PropertyValue_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <LinearLayout 
+                        android:gravity="right"
+                    >
+                    <TextView 
+                            android:id="@+id/label1"
+                            android:text="@string/itemexpand_textview_listpicker"
+                            style="@style/QSO.FP.ListPickerLabel_TextView"
+                        />
+                    <ImageButton
+                            android:id="@+id/plan_addcard"
+                            android:src="@android:drawable/ic_menu_add"
+                            style="@style/Action_ImageButton"
+                            android:gravity="right"
+                        />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+        <View
+                android:id="@+id/spacer1"
+                android:layout_width="150px"
+                android:layout_height="5px"
+                android:background="#DEADBABE"
+                android:layout_below="@id/plan_cc_panel"
+                android:layout_alignParentRight="true"
+            />
+        <TableLayout
+                android:id="@+id/plan_details"
+                android:layout_below="@id/spacer1"
+                android:layout_alignParentRight="true"
+                style="@style/QSO.FW.TwoColumnList_Table"
+            >
+            <TableRow>
+                <TextView 
+                        android:id="@+id/plan_errorText" 
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_span="2"
+                        style="@style/QSO.FW.SubTitleLabel_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Description: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <TextView 
+                        android:id="@+id/plan_description"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Sign-up Fee: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <TextView 
+                        android:id="@+id/plan_planCharge"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow >
+                <TextView 
+                        android:text="Monthly Charge: "
+                        android:lines="2"
+                        android:maxWidth="110px"
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <TextView 
+                        android:id="@+id/plan_recurringCharges"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow >
+                <TextView 
+                        android:text="Free value: "
+                        android:lines="2"
+                        android:maxWidth="110px"
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <TextView 
+                        android:id="@+id/plan_freeValue"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+        </TableLayout>
+        <View
+                android:id="@+id/spacer2"
+                android:layout_width="150px"
+                android:layout_height="5px"
+                android:background="#DEADBABE"
+                android:layout_below="@id/plan_details"
+                android:layout_alignParentRight="true"
+            />
+        <Button android:id="@+id/plan_now"
+                android:layout_height="40px"
+                android:layout_width="wrap_content"
+                android:src="@android:drawable/ic_menu_save"
+                android:scaleType="fitXY"
+                android:text="Buy Now!"
+                android:layout_below="@id/spacer2"
+            />
+        <Button android:id="@+id/plan_later"
+                android:layout_height="40px"
+                android:layout_width="wrap_content"
+                android:src="@android:drawable/ic_menu_save"
+                android:scaleType="fitXY"
+                android:layout_gravity="right"
+                android:text="Set for later.."
+                android:layout_below="@id/spacer2"
+                android:layout_toRightOf="@id/plan_now"
+            />
+        <EditText android:id="@+id/plan_schedule"
+                android:layout_height="40px"
+                android:layout_width="100px"
+                android:gravity="left"
+                android:singleLine="true"
+                android:layout_below="@id/spacer2"
+                android:layout_toRightOf="@id/plan_later"
+                android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+</ScrollView>

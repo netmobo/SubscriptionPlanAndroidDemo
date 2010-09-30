@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<resources>
+    <style name="QSO">
+        <item name="android:textColor">#47f</item>
+    </style>
+    <!-- Use as needed. Typically tho, it would be either of the first two -->
+    <!-- fill_parent (on both) -->
+    <style name="QSO.FP">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <!-- wrap_content (on both) -->
+    <style name="QSO.WC">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- fill height -->
+    <style name="QSO.FH">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <!-- fill width -->
+    <style name="QSO.FW">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="QSO.FP.Layout">
+        <item name="android:background">#EEF</item>
+    </style>
+    <style name="QSO.FH.Layout">
+        <item name="android:background">#EEF</item>
+    </style>
+    <style name="QSO.FW.Layout">
+        <item name="android:background">#EEF</item>
+    </style>
+    <style name="QSO.WC.Layout">
+        <item name="android:background">#EEF</item>
+    </style>
+    
+    <style name="QSO.FW.TitleLabel_TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">#EEF</item>
+        <item name="android:padding">4px</item>
+    </style>
+    <style name="QSO.FW.SubTitleLabel_TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">#EEF</item>
+        <item name="android:padding">4px</item>
+    </style>
+    
+    <!-- these are typically used on tables -->
+    <style name="QSO.FP.PropertyLabel_TextView">
+        <item name="android:layout_width">0px</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:background">#EEF</item>
+        <item name="android:padding">4px</item>
+    </style>
+    
+    <style name="QSO.FP.ListPickerLabel_TextView">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:background">#EEF</item>
+        <item name="android:padding">4px</item>
+        <item name="android:layout_span">2</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <!-- This is for Active Account or Service -->
+    <style name="QSO.FP.PropertyValue_TextView">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:background">#BFAD</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    <!-- This is for usual input -->
+    <style name="QSO.FP.PropertyInput_EditText">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#F000</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    
+    <!-- This is used in signup page.. -->
+    <style name="QSO.FW.PropertyInput_EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#F000</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_marginLeft">5dip</item>
+        <item name="android:layout_marginRight">5dip</item>
+    </style>
+    
+    <style name="QSO.FW.TwoColumnList_Table">
+        <item name="android:stretchColumns">*</item>
+    </style>
+    
+    <!-- This is for usual actions -->
+    <style name="QSO.WC.Action_Button">
+        <item name="android:textColor">#F000</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- This is for usual actions -->
+    <style name="QSO.WC.Action_CheckBox">
+        <item name="android:textColor">#F000</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="QSO.WC.UserHomeActions_Button">
+        <item name="android:textColor">#F000</item>
+        <item name="android:layout_width">0px</item>
+        <item name="android:padding">0px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="Action_ImageButton">
+        <item name="android:layout_width">35px</item>
+        <item name="android:layout_height">35px</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+</resources>

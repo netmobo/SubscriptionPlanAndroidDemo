@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        style="@style/QSO.FP.Layout"
+    >
+    <LinearLayout
+            android:orientation="vertical"
+            style="@style/QSO.FP.Layout"
+        >
+        <TextView 
+                android:id="@+id/account_title" 
+                android:gravity="center"
+                android:textSize="16sp"
+                style="@style/QSO.FW"
+            />
+        <TableLayout
+                style="@style/QSO.FW.TwoColumnList_Table"
+            >
+            <TableRow>
+                <TextView 
+                        android:id="@+id/account_errorText" 
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_span="2"
+                        android:textColor="#3356aa"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="SerialNumber: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_serialNumber"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                        android:focusable="false"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="AccountID: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_accountID"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Currency: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_currencyID"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="@string/itemexpand_textview_listpicker"
+                        style="@style/QSO.FP.ListPickerLabel_TextView"
+                    />
+            </TableRow>
+            <!--Use select list option... see signup for more reference-->
+            <TableRow>
+                <TextView 
+                        android:text="Type: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_type"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Status: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_status"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Balance: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_balance"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="User ID: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_userID"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="@string/itemexpand_textview_listpicker"
+                        style="@style/QSO.FP.ListPickerLabel_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="PlanID: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText 
+                        android:id="@+id/account_planID"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="@string/itemexpand_textview_listpicker"
+                        style="@style/QSO.FP.ListPickerLabel_TextView"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView 
+                        android:text="Plan Balance: "
+                        style="@style/QSO.FP.PropertyLabel_TextView"
+                    />
+                <EditText android:id="@+id/account_planBalance"
+                        style="@style/QSO.FP.PropertyInput_EditText"
+                    />
+            </TableRow>
+        </TableLayout>
+        <ImageButton android:id="@+id/item_save"
+                android:src="@android:drawable/ic_menu_save"
+                android:layout_gravity="right"
+                style="@style/Action_ImageButton"
+            />
+    </LinearLayout>
+</ScrollView>

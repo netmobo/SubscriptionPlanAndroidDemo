@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/QSO.FP.Layout"
+        android:fillViewport="true"
+    >
+    <RelativeLayout 
+            style="@style/QSO.FP.Layout"
+        >
+        <LinearLayout
+	            android:id="@+id/purchase_success"
+                style="@style/QSO.FW.Layout"
+                android:orientation="vertical"
+            >
+	        <TextView 
+	                android:textSize="20sp" 
+	                android:text="You are now watching..." 
+	                style="@style/QSO.FW"
+	            />
+	        <View
+	                android:layout_height="10px" 
+	                android:layout_width="fill_parent" 
+	            />
+	        <TextView 
+	                android:id="@+id/purchase_title"
+	                android:textSize="30sp" 
+	                android:gravity="center"
+	                style="@style/QSO.FW"
+	            />
+	        <View
+	                android:layout_height="10px" 
+	                android:layout_width="fill_parent" 
+	            />
+	        <TextView 
+	                android:textSize="20sp" 
+	                android:text="(This is just a demo. Use your imagination.)" 
+	                android:gravity="center"
+	                android:textColor="#FFFF1122"
+	                style="@style/QSO.FW"
+	            />
+        </LinearLayout>
+        <TextView 
+                android:id="@+id/purchase_errorMessage"
+                android:textSize="20sp" 
+                android:text="Unable to perform transaction. Please try again later." 
+                android:gravity="center"
+                style="@style/QSO.FW"
+                android:visibility="gone"
+            />
+    </RelativeLayout>
+</ScrollView>

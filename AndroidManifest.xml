@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (c) 2010, NETMOBO LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+    i.   Redistributions of source code must retain the above copyright 
+         notice, this list of conditions and the following disclaimer.
+    ii.  Redistributions in binary form must reproduce the above copyright 
+         notice, this list of conditions and the following disclaimer in the 
+         documentation and/or other materials provided with the 
+         distribution.
+    iii. Neither the name of NETMOBO LLC nor the names of its contributors 
+         may be used to endorse or promote products derived from this 
+         software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE.
+ -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package = "com.feefactor.samples.android"
+	android:versionCode="3" android:versionName="3">
+	<application android:icon="@drawable/sidebar_home" android:label="@string/app_name"
+		android:name="QuickstartApplication" 
+		android:debuggable="true"
+		>
+		
+		<!-- plans part -->
+        <activity android:name="com.feefactor.samples.android.plans.LoginActivity">
+            <!-- transfer this to whichever is the first 'page' -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.feefactor.samples.android.plans.UserHomeActivity"/>
+        <activity android:name="com.feefactor.samples.android.plans.PlanListActivity" />
+        
+        <activity android:name="com.feefactor.samples.android.plans.AccountHistoryListActivity" />
+        <activity android:name="com.feefactor.samples.android.plans.AccountPlanHistoryListActivity" />
+        
+        <activity android:name="com.feefactor.samples.android.plans.CreditCardPaymentActivity" />
+        <activity android:name="com.feefactor.samples.android.plans.GoogleCheckoutActivity" />
+        <activity android:name="com.feefactor.samples.android.plans.SignUpActivity" />
+        
+        <activity android:name="com.feefactor.samples.android.plans.SelectAccountActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="com.feefactor.samples.android.plans.SelectCardActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="com.feefactor.samples.android.plans.InputAmountActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="com.feefactor.samples.android.plans.HistoryOptionActivity" android:theme="@android:style/Theme.Dialog"/>
+        
+        <activity android:name="com.feefactor.samples.android.plans.PlanActivity" />
+        <activity android:name="com.feefactor.samples.android.plans.UserCardActivity" />
+        
+        <activity android:name="com.feefactor.samples.android.plans.PurchaseMovieActivity" />
+        <activity android:name="com.feefactor.samples.android.plans.PurchaseResultActivity" />
+        
+        <activity android:name="com.feefactor.samples.android.plans.TestActivity" />
+	</application>
+	<uses-sdk android:minSdkVersion="3" />
+	
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+</manifest> 
